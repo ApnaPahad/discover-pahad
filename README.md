@@ -1,2 +1,20 @@
-# discover-pahad
-A travel blog website built under the apnaPahad initiative, showcasing the beauty, culture, and hidden gems of Uttarakhand. From famous destinations to offbeat trails, Discover Pahad is your digital guide to exploring the soul of the Himalayas.
+# Discover Pahad 🌄
+
+Welcome to **Discover Pahad**, a web-based travel blog dedicated to the stunning landscapes, rich culture, and hidden gems of **Uttarakhand**, India.
+
+### 🌟 Features:
+- Travel guides to popular and offbeat places
+- Culturally rich stories and traditions
+- Scenic photography and travel inspiration
+- Responsive blog design (HTML/CSS/JS or any framework you choose)
+
+### 📍 Focus Areas:
+- Hill stations like Nainital, Mussoorie
+- Sacred spots like Kedarnath, Badrinath
+- Trekking routes and local experiences
+- Food, festivals, and folklore of Uttarakhand
+
+---
+
+This project is part of the **apnaPahad** initiative to promote sustainable and meaningful travel in the Himalayan region.
+
