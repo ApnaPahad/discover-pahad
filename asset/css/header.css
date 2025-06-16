@@ -87,7 +87,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(22, 24, 44, 0.90);
+  background-color: rgba(22, 24, 44, 0.9);
   display: none;
   justify-content: center;
   align-items: center;
@@ -216,9 +216,24 @@
   display: none;
 }
 
+#mainHeader #HeaderOverlay.overlay {
+  display: flex;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+#mainHeader #HeaderOverlay.overlay.active {
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+}
+
 @media screen and (max-width: 767px) {
   #mainHeader .container {
     justify-content: space-between;
+  }
+
+  #mainHeader .logo {
+    max-width: 80px;
   }
 
   #mainHeader .navbar,
@@ -231,5 +246,44 @@
     display: block;
     width: 30px;
     height: 30px;
+  }
+
+  #mainHeader #HeaderOverlay.overlay {
+    justify-content: flex-start; 
+  }
+
+  #mainHeader #HeaderOverlay .popup {
+    height: 100%;
+    border-radius: 0px;
+    width: 75%;
+  }
+
+  #mainHeader #HeaderOverlay .logo {
+    margin: auto;
+    margin-bottom: 32px;
+  }
+
+  #mainHeader #HeaderOverlay .navbar,
+  #mainHeader #HeaderOverlay #subscribe_Button,
+  #mainHeader #HeaderOverlay .profile-img {
+    display: block;
+  }
+
+  #mainHeader #HeaderOverlay .navbar ul {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  #mainHeader #HeaderOverlay .navbar .navigation-item {
+    width: 100%;
+  }
+
+  #mainHeader #HeaderOverlay .navbar .navigation-item a {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(13, 20, 28, 0.5);
+    width: 100%;
+    display: block;
+    text-align: start;
   }
 }
