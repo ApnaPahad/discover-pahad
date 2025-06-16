@@ -1,0 +1,424 @@
+/* Hero Banner */
+
+.hero-banner {
+  padding: 40px 15px;
+  background-color: #fbfaf9;
+}
+
+.hero-banner .container {
+  background: url("../images/Hero\ Banner.png") center/cover no-repeat;
+  height: 480px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 24px;
+  box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.15);
+}
+
+.hero-banner .title {
+  max-width: 630px;
+  color: var(--white-color);
+  text-align: center;
+  font-feature-settings: "dlig" on;
+  font-family: var(--primary-font-family);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 100%; /* 125% */
+  letter-spacing: 2.5px;
+}
+
+.hero-banner .description {
+  color: var(--white-color);
+  text-align: center;
+  font-feature-settings: "dlig" on;
+  font-family: var(--primary-font-family);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 150% */
+  margin-bottom: 24px;
+}
+
+.hero-banner .start-exploring {
+  height: 48px;
+  padding: 0px 20px;
+  border-radius: 8px;
+  background: #0d78f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--secondary-font-color);
+  font-family: var(--primary-font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+}
+
+@media screen and (max-width: 767px) {
+  .hero-banner {
+    padding: 24px 15px;
+  }
+
+  .hero-banner .container {
+    padding: 24px;
+    height: 425px;
+  }
+
+  .hero-banner .title {
+    font-size: 28px;
+  }
+}
+
+/* Tab Section */
+
+.tab-section {
+  padding: 50px 15px;
+  background: #fbfaf9;
+}
+
+.tab-section .section-title {
+  margin-bottom: 70px;
+  color: var(--primary-font-color);
+  text-align: center;
+  font-family: var(--primary-font-family);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.tab-section .content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 80px;
+}
+
+.tab-section .img-section {
+  width: 100%;
+  height: 400px;
+  background: #f5d1b0;
+  border-radius: 25px;
+}
+
+.tab-section .img-section .image {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-3deg);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 15px;
+  transition-delay: 0.5s;
+}
+
+.tab-section .img-section .image:hover {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.tab-section .img-section .image .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+  /* transition-delay: 0.3s; */
+}
+
+.tab-section .img-section .image:hover .overlay {
+  transform: translateY(0%);
+  transition: transform 0.5s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+.tab-section .img-section .image .overlay div {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #fff;
+  width: 100%;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.tab-section .img-section .image .overlay h3 {
+  color: var(--primary-font-color);
+  font-family: var(--primary-font-family);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.tab-section .img-section .image .overlay .explore {
+  height: 48px;
+  padding: 0px 20px;
+  border-radius: 8px;
+  background: #0d78f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--secondary-font-color);
+  font-family: var(--primary-font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+}
+
+.tab-section .img-section img {
+  transition: opacity 0.5s ease;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.tab-section .text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.tab-section .text-section .box {
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  border-left: 2px solid transparent;
+  cursor: pointer;
+}
+
+.tab-section .text-section .box.active {
+  border-left: 2px solid var(--primary-font-color);
+}
+
+.tab-section .text-section .box h3 {
+  color: var(--primary-font-color);
+  font-family: var(--primary-font-family);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.tab-section .text-section .box p {
+  color: var(--primary-font-color);
+  font-family: var(--primary-font-family);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+@media screen and (max-width: 767px) {
+  .tab-section {
+    padding: 24px 15px;
+  }
+
+  .tab-section .content-wrapper {
+    grid-template-columns: auto;
+    gap: 30px;
+  }
+
+  .tab-section .section-title {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+
+  .tab-section .img-section {
+    height: 275px;
+  }
+}
+
+/* Discover The Power */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.discover-the-power {
+  padding: 80px 15px;
+  background: #fbfaf9;
+}
+
+.discover-the-power .container {
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  gap: 32px;
+  position: relative;
+}
+
+.discover-the-power .section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  position: sticky;
+  top: 10%;
+}
+
+.discover-the-power .section-content h2 {
+  font-family: Inter, sans-serif;
+  font-size: 35px;
+  color: #191818;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.discover-the-power .section-content p {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  color: #191818;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.discover-the-power .section-content .more-explore {
+  padding: 8px 24px;
+  background: #bf4408;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 150%;
+  border-radius: 24px;
+  text-decoration: none;
+}
+
+.discover-the-power .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.discover-the-power .card {
+  padding: 32px;
+  top: 10%;
+  position: sticky;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.discover-the-power .card_01,
+.discover-the-power .card_03 {
+  transform: rotate(-2deg);
+  background: #fff;
+}
+
+.discover-the-power .card_02,
+.discover-the-power .card_04 {
+  transform: rotate(2deg);
+  background: #f5d1b0;
+}
+
+.discover-the-power .card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+}
+
+.discover-the-power .card .card-header h3 {
+  font-family: Inter, sans-serif;
+  font-size: 35px;
+  color: #191818;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.discover-the-power .card .card-header p {
+  font-family: Inter, sans-serif;
+  font-size: 40px;
+  color: #191818;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.discover-the-power .card .card-description {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  color: #191818;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .discover-the-power {
+    padding: 32px 15px;
+  }
+
+  .discover-the-power .container {
+    grid-template-columns: auto;
+    gap: 28px;
+  }
+
+  .discover-the-power .section-content {
+    align-items: center;
+    position: unset;
+    gap: 16px;
+  }
+
+  .discover-the-power .section-content h2 {
+    font-size: 28px;
+    line-height: 125%;
+    text-align: center;
+  }
+
+  .discover-the-power .section-content p {
+    font-size: 16px;
+    line-height: 125%;
+    text-align: center;
+  }
+
+  .discover-the-power .card {
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .discover-the-power .card .card-header h3 {
+    font-size: 22px;
+    line-height: 125%;
+  }
+
+  .discover-the-power .card .card-header p {
+    font-size: 28px;
+    line-height: 125%;
+  }
+
+  .discover-the-power .card .card-description {
+    font-size: 14px;
+    line-height: 125%;
+  }
+}
