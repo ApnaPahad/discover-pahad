@@ -277,7 +277,7 @@
   gap: 24px;
   align-items: flex-start;
   position: sticky;
-  top: 10%;
+  top: 15%;
 }
 
 .discover-the-power .section-content h2 {
@@ -318,7 +318,7 @@
 
 .discover-the-power .card {
   padding: 32px;
-  top: 10%;
+  top: 15%;
   position: sticky;
   border-radius: 8px;
   box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.1);
