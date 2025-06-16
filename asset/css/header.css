@@ -211,3 +211,25 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+#mainHeader .hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  #mainHeader .container {
+    justify-content: space-between;
+  }
+
+  #mainHeader .navbar,
+  #mainHeader #subscribe_Button,
+  #mainHeader .profile-img {
+    display: none;
+  }
+
+  #mainHeader .hamburger {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+}
