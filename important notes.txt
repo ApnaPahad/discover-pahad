@@ -1,0 +1,8 @@
+document store data - https://docs.google.com/document/d/1BNakQb1RiKPebGGB7KfJ9oZOYUkdbWC84hMV0DZUx-M/edit?tab=t.0 [pnainwal050@gmail.com]
+fimga - https://www.figma.com/design/FHWylcL0nvL75b52k8J7Xp/Website-Design?node-id=0-1&p=f&t=xEAT2H075S2u7DjQ-0
+design provide by - https://stitch.withgoogle.com/projects/14143900591792151558
+Subscriber Google Sheet - https://docs.google.com/spreadsheets/d/15vfTPLB5ryRg2K-4i-HqOYvVup3VXnWEFEKmoNGdN38/edit?gid=0#gid=0
+subscriber google script - https://script.google.com/home/projects/1qQxkDClFcurr9CFwfl4w7YQFswqz4BDqDaGEecfq2JtIxBfXcGMFxw0j/edit
+hosting Website locally - npx serve .
+
+#day 1 - Create header and added by javaScript in Landing Page.
