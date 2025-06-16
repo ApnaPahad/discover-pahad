@@ -51,6 +51,26 @@
             </div>
         `;
 
+        var mobileHeader = `
+            <div id="HeaderOverlay" class="overlay">
+              <div class="popup">
+                <span class="closeBtn" id="closeHeader">&times;</span>
+                <div class="logo">
+                    <img src="asset/images/Apna Pahad.png" alt="Apna Pahad - Discover Uttrakhand">
+                </div>
+                <nav class="navbar">
+                <ul>
+                    <li class="navigation-item"><a href="#">Destinations</a></li>
+                    <li class="navigation-item"><a href="#">Experiences</a></li>
+                    <li class="navigation-item"><a href="#">Culture</a></li>
+                    <li class="navigation-item"><a href="#">Stories</a></li>
+                    <li class="navigation-item"><a href="#">Plan Your Trip</a></li>
+                </ul>
+                </nav>
+              </div>
+            </div>
+        `;
+
         function waitForElement(selector, trigger) {
             var interval = setInterval(function () {
                 if (
@@ -67,6 +87,26 @@
             }, 15000);
         };
 
+
+        function showMobileHeader() {
+            const openBtn = document.querySelector("#mainHeader .hamburger");
+            const closeBtn = document.getElementById("closeHeader");
+            const overlay = document.getElementById("HeaderOverlay");
+
+            openBtn.addEventListener("click", () => {
+                overlay.classList.add("active");
+            });
+
+            closeBtn.addEventListener("click", () => {
+                overlay.classList.remove("active");
+            });
+
+            window.addEventListener("click", (e) => {
+                if (e.target === overlay) {
+                    overlay.classList.remove("active");
+                }
+            });
+        }
 
         function showPopup() {
             const openBtn = document.getElementById("subscribe_Button");
@@ -106,9 +146,10 @@
             waitForElement('#mainHeader', function () {
                 var targetElement = document.querySelector("#mainHeader");
                 if (targetElement) {
-                    targetElement.insertAdjacentHTML("beforeend", subscribePopup); // Add the category section
+                    targetElement.insertAdjacentHTML("beforeend", [subscribePopup, mobileHeader].join('')); // Add the category section
                 }
             });
+            waitForElement('#mainHeader .hamburger', showMobileHeader);
             waitForElement('#mainHeader #subscribe_Button', showPopup);
         }
 
