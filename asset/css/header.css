@@ -1,10 +1,9 @@
 #mainHeader {
   padding: 12px 40px;
   border-bottom: 1px solid #e5e8eb;
-  background: #fff;
+  background: #fbfaf9;
   width: 100%;
   box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.12);
-  border-bottom: none;
   position: sticky;
   top: 0;
   z-index: 9999;
@@ -241,8 +240,8 @@
 
   #mainHeader .hamburger {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
   }
 
   #mainHeader #HeaderOverlay.overlay {
