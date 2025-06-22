@@ -370,12 +370,6 @@
 
 /* Discover The Power */
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 .discover-the-power {
   padding: 80px 15px;
   background: #fbfaf9;
@@ -451,14 +445,12 @@
   gap: 24px;
 }
 
-.discover-the-power .card_01,
-.discover-the-power .card_03 {
+.discover-the-power .card:nth-child(odd) {
   transform: rotate(-2deg);
   background: #fff;
 }
 
-.discover-the-power .card_02,
-.discover-the-power .card_04 {
+.discover-the-power .card:nth-child(even) {
   transform: rotate(2deg);
   background: #f5d1b0;
 }

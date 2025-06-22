@@ -67,6 +67,18 @@
                     <li class="navigation-item"><a href="#">Plan Your Trip</a></li>
                 </ul>
                 </nav>
+                <!--
+                <div class="mobile-newletter">
+                    <input type="email" name="email" placeholder="Enter Your Email...">
+                    <div class="checkbox">
+                        <input type="checkbox" name="privacy-policy">
+                        <label for="privacy-policy">I agree to receive emails and confirm that I have read and accepted the privacy policy.</label>
+                    </div>
+                    <button>Subscribe</button>
+                    <h2>Thank You for Subscribing!</h2>
+                    <p>We’ll keep you updated with travel inspiration, hidden gems, and unforgettable experiences from the heart of Uttarakhand — straight to your inbox.</p>
+                </div>
+                -->
               </div>
             </div>
         `;
@@ -87,6 +99,48 @@
             }, 15000);
         };
 
+        function mobileNewsletter() {
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.querySelector(".mobile-newletter");
+                const emailInput = form.querySelector("input[name='email']");
+                const checkbox = form.querySelector("input[name='privacy-policy']");
+                const label = form.querySelector("label[for='privacy-policy']");
+                const submitBtn = form.querySelector("button");
+
+                const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxOzylqhSZ16BqVGP8bit6ZgjFv0nZVG18fXtVoev4sCGM8qGPl4ZXy5tLUQk_4Zz_kFQ/exec";
+
+                submitBtn.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const email = emailInput.value.trim();
+
+                    // Validation: checkbox must be checked
+                    if (!checkbox.checked) {
+                        label.style.color = "red";
+                        return;
+                    } else {
+                        label.style.color = ""; // reset label color if previously red
+                    }
+
+                    // Submit to Google Sheet
+                    fetch(GOOGLE_SCRIPT_URL, {
+                        method: "POST",
+                        mode: "no-cors",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                        },
+                        body: `email=${encodeURIComponent(email)}`
+                    })
+                        .then(() => {
+                            form.classList.add("submitted");
+                        })
+                        .catch(err => {
+                            console.error("Error submitting form:", err);
+                        });
+                });
+            });
+        }
+
 
         function showMobileHeader() {
             const openBtn = document.querySelector("#mainHeader .hamburger");
@@ -106,6 +160,10 @@
                     overlay.classList.remove("active");
                 }
             });
+
+            mobileNewsletter();
+
+            // waitForElement("#HeaderOverlay", )
         }
 
         function showPopup() {
@@ -128,20 +186,6 @@
             });
         }
 
-        function handleScrollClassOnHeader(headerId, className = "scrolled") {
-            const header = document.getElementById(headerId);
-
-            if (!header) return;
-
-            window.addEventListener("scroll", function () {
-                if (window.scrollY > 0) {
-                    header.classList.add(className);
-                } else {
-                    header.classList.remove(className);
-                }
-            });
-        };
-
         function addPopup() {
             waitForElement('#mainHeader', function () {
                 var targetElement = document.querySelector("#mainHeader");
@@ -155,7 +199,6 @@
 
         function addHeader() {
             document.body.insertAdjacentHTML("afterbegin", headerHTML);
-            handleScrollClassOnHeader("mainHeader");
         };
 
         function initNewsletterPopupForm() {
