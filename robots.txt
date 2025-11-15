@@ -1,5 +1,5 @@
 User-agent: *
 Disallow: /asset/
-Allow: /pages
+Allow: /pages/
 
-Sitemap: https://apnapahad.github.io/discover-pahad//sitemap.xml
+Sitemap: https://pnapahad.github.io/discover-pahad/sitemap.xml
