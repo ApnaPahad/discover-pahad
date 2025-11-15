@@ -5,5 +5,3 @@ Subscriber Google Sheet - https://docs.google.com/spreadsheets/d/15vfTPLB5ryRg2K
 subscriber google script - https://script.google.com/home/projects/1qQxkDClFcurr9CFwfl4w7YQFswqz4BDqDaGEecfq2JtIxBfXcGMFxw0j/edit
 mobile subscriber google script - https://script.google.com/u/0/home/projects/1QwupvmGyQb1k3iGPnLeOLVDPx8CmD18W2YqU22961Y5VR1Dz3dQCqZ1m/edit
 hosting Website locally - npx serve .
-
-#day 1 - Create header and added by javaScript in Landing Page.
