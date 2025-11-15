@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /asset/
+Allow: /pages
+
+Sitemap: https://apnapahad.github.io/discover-pahad//sitemap.xml
