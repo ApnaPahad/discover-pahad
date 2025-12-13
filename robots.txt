@@ -1,5 +1,20 @@
-User-agent: *
-Disallow: /asset/
-Allow: /pages/
+# robots.txt for Apna Pahad Website
 
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Disallow asset folders (optional - remove if you want assets indexed)
+Disallow: /asset/js/
+Disallow: /asset/css/
+
+# Allow pages
+Allow: /pages/
+Allow: /*.html
+
+# Sitemap location
 Sitemap: https://pnapahad.github.io/discover-pahad/sitemap.xml
+Sitemap: https://pnapahad.github.io/discover-pahad/sitemap.html
+
+# Crawl delay (optional - adjust as needed)
+Crawl-delay: 1

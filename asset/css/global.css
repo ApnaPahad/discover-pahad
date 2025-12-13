@@ -1,27 +1,353 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
-    max-width: 1280px;
-    width: 100%;
-    margin: auto;
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
 }
 
 img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 :root {
-    --primary-font-family: 'Inter', sans-serif;
-    --primary-font-color: #0d141c;
-    --secondary-font-color: #f7fafc;
-    --white-color: #fff;
+  /* Font Family */
+  --primary-font-family: "Inter", sans-serif;
+
+  /* Colors */
+  --primary-font-color: #0d141c;
+  --secondary-font-color: #f7fafc;
+  --white-color: #fff;
+  --black-color: #000;
+
+  /* Background Colors */
+  --bg-dark-gradient: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  --bg-dark-start: #1a1a1a;
+  --bg-dark-end: #2d2d2d;
+  --bg-light: #fbfaf9;
+  --bg-white: #fff;
+  --bg-gray-light: #f8f9fa;
+  --bg-gray-medium: #e9ecef;
+  --bg-gray-dark: #191818;
+  --bg-beige-light: #f5d1b0;
+  --bg-beige-medium: #e8c4a0;
+  --bg-cream: #f2ede8;
+  --bg-text-dark: #1c140d;
+
+  /* Accent Colors */
+  --accent-blue: #0054aa;
+  --accent-blue-rgb: 0, 84, 170;
+  --accent-blue-light: #0d78f2;
+  --accent-blue-light-rgb: 13, 120, 242;
+  --accent-orange: #bf4408;
+  --accent-orange-rgb: 191, 68, 8;
+  --accent-orange-light: #e65103;
+  --accent-orange-light-rgb: 230, 81, 3;
+
+  /* Text Colors */
+  --text-dark: #0d141c;
+  --text-dark-rgb: 13, 20, 28;
+  --text-light: #f7fafc;
+  --text-white: #ffffff;
+
+  /* Border Colors */
+  --border-white-light: rgba(255, 255, 255, 0.1);
+  --border-white-medium: rgba(255, 255, 255, 0.3);
+  --border-white-strong: rgba(255, 255, 255, 0.4);
+
+  /* Shadow Colors */
+  --shadow-dark: rgba(0, 0, 0, 0.1);
+  --shadow-dark-medium: rgba(0, 0, 0, 0.15);
+  --shadow-dark-strong: rgba(0, 0, 0, 0.2);
+  --shadow-dark-very-strong: rgba(0, 0, 0, 0.25);
+  --shadow-dark-heavy: rgba(0, 0, 0, 0.3);
+  --shadow-dark-very-heavy: rgba(0, 0, 0, 0.35);
+  --shadow-dark-extreme: rgba(0, 0, 0, 0.4);
+  --shadow-dark-ultra: rgba(0, 0, 0, 0.5);
+  --shadow-blue-light: rgba(0, 84, 170, 0.4);
+  --shadow-blue-medium: rgba(0, 84, 170, 0.6);
+  --shadow-blue-light-alt: rgba(13, 120, 242, 0.4);
+  --shadow-blue-medium-alt: rgba(13, 120, 242, 0.6);
+  --shadow-orange-medium: rgba(191, 68, 8, 0.6);
+
+  /* Overlay Colors */
+  --overlay-dark-light: rgba(0, 0, 0, 0.3);
+  --overlay-dark-medium: rgba(0, 0, 0, 0.4);
+  --overlay-dark-heavy: rgba(0, 0, 0, 0.7);
+  --overlay-dark-extreme: rgba(0, 0, 0, 0.8);
+  --overlay-blue-light: rgba(0, 84, 170, 0.1);
+  --overlay-blue-medium: rgba(0, 84, 170, 0.05);
+  --overlay-blue-strong: rgba(0, 84, 170, 0.08);
+  --overlay-blue-very-light: rgba(0, 84, 170, 0.04);
+  --overlay-blue-very-strong: rgba(0, 84, 170, 0.15);
+  --overlay-orange-light: rgba(191, 68, 8, 0.1);
+  --overlay-orange-very-light: rgba(191, 68, 8, 0.04);
+  --overlay-white-light: rgba(255, 255, 255, 0.1);
+  --overlay-white-medium: rgba(255, 255, 255, 0.2);
+  --overlay-white-strong: rgba(255, 255, 255, 0.25);
+  --overlay-white-very-light: rgba(255, 255, 255, 0.05);
+  --overlay-white-very-strong: rgba(255, 255, 255, 0.9);
+
+  /* Text Opacity */
+  --text-opacity-high: rgba(13, 20, 28, 0.8);
+  --text-opacity-medium: rgba(13, 20, 28, 0.7);
+  --text-opacity-low: rgba(13, 20, 28, 0.6);
+  --text-white-opacity-high: rgba(255, 255, 255, 0.95);
+  --text-white-opacity-medium: rgba(255, 255, 255, 0.9);
+  --text-white-opacity-low: rgba(255, 255, 255, 0.6);
+
+  /* Gradient Colors */
+  --gradient-blue: linear-gradient(
+    135deg,
+    var(--accent-blue) 0%,
+    var(--accent-blue-light) 100%
+  );
+  --gradient-blue-reverse: linear-gradient(
+    135deg,
+    var(--accent-blue-light) 0%,
+    var(--accent-blue) 100%
+  );
+  --gradient-orange: linear-gradient(
+    135deg,
+    var(--accent-orange-light) 0%,
+    var(--accent-orange) 100%
+  );
+  --gradient-beige: linear-gradient(
+    135deg,
+    var(--bg-beige-light) 0%,
+    var(--bg-beige-medium) 100%
+  );
+  --gradient-gray: linear-gradient(
+    135deg,
+    var(--bg-gray-light) 0%,
+    var(--bg-gray-medium) 50%,
+    var(--bg-gray-light) 100%
+  );
+  --gradient-white-gray: linear-gradient(
+    135deg,
+    var(--bg-white) 0%,
+    var(--bg-gray-light) 100%
+  );
+  --gradient-light: linear-gradient(
+    180deg,
+    var(--bg-white) 0%,
+    var(--bg-light) 100%
+  );
+  --gradient-light-reverse: linear-gradient(
+    180deg,
+    var(--bg-light) 0%,
+    var(--bg-white) 100%
+  );
+  --gradient-white-gray-light: linear-gradient(
+    180deg,
+    var(--bg-white) 0%,
+    var(--bg-gray-light) 100%
+  );
+  --gradient-white-gray-light-reverse: linear-gradient(
+    180deg,
+    var(--bg-gray-light) 0%,
+    var(--bg-white) 100%
+  );
+  --gradient-blue-horizontal: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-blue),
+    transparent
+  );
+  --gradient-blue-horizontal-alt: linear-gradient(
+    90deg,
+    var(--accent-blue),
+    var(--accent-blue-light)
+  );
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* Smooth cursor for interactive elements */
+a,
+button,
+.card,
+.image {
+  cursor: pointer;
+}
+
+/* Enhanced focus states for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Universal Button Shine Effect */
+.btn-shine,
+.start-exploring,
+.explore,
+.start-planing,
+.more-explore,
+.destination-btn,
+button[type="submit"],
+#subscribe_Button {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::before,
+.start-exploring::before,
+.explore::before,
+.start-planing::before,
+.more-explore::before,
+.destination-btn::before,
+button[type="submit"]::before,
+#subscribe_Button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--overlay-white-medium),
+    transparent
+  );
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.btn-shine:hover::before,
+.start-exploring:hover::before,
+.explore:hover::before,
+.start-planing:hover::before,
+.more-explore:hover::before,
+.destination-btn:hover::before,
+button[type="submit"]:hover::before,
+#subscribe_Button:hover::before {
+  left: 100%;
+}
+
+.btn-shine > *,
+.start-exploring > *,
+.explore > *,
+.start-planing > *,
+.more-explore > *,
+.destination-btn > *,
+button[type="submit"] > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.fade-in-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInScale 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Stagger Animation Delays */
+.fade-in-up:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.fade-in-up:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.fade-in-up:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.fade-in-up:nth-child(4) {
+  animation-delay: 0.4s;
 }

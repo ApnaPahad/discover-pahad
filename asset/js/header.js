@@ -4,38 +4,14 @@
         var debug = 1;
         var variation_name = "addHeader";
 
-        var headerHTML = `
-        <header id="mainHeader">
-            <div class="container">
-            <div class="hamburger">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#0d141c" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
-            </div>
-            <div class="logo">
-                <img src="asset/images/logo.png" alt="Apna Pahad - Discover Uttrakhand">
-            </div>
-            <nav class="navbar">
-                <ul>
-                    <li class="navigation-item"><a href="#">Destinations</a></li>
-                    <li class="navigation-item"><a href="#">Experiences</a></li>
-                    <li class="navigation-item"><a href="#">Culture</a></li>
-                    <li class="navigation-item"><a href="#">Stories</a></li>
-                    <li class="navigation-item"><a href="#">Plan Your Trip</a></li>
-                </ul>
-            </nav>
-            <button id="subscribe_Button">Subscribe</button>
-            <a href="#" class="profile-img">
-                <img src="asset/images/profile.png" alt="About Me">
-            </a>
-            </div>
-        </header>
-        `;
 
-        var subscribePopup = `
+        function getSubscribePopup() {
+            return `
             <div id="popupOverlay" class="overlay">
               <div class="popup">
                 <span class="closeBtn" id="closePopupBtn">&times;</span>
                 <div class="popup-image">
-                    <img src="asset/images/Popup-Image.jpg" alt="Discover Uttarakhand">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Discover Uttarakhand - Valley of Flowers">
                 </div>
                 <h2>Stay Connected to the Spirit of Uttarakhand!</h2>
                 <p>Unlock exclusive content, travel tips, and special offers delivered straight to your inbox. Be the first to know about new destinations and hidden gems in Uttarakhand.</p>
@@ -50,38 +26,7 @@
               </div>
             </div>
         `;
-
-        var mobileHeader = `
-            <div id="HeaderOverlay" class="overlay">
-              <div class="popup">
-                <span class="closeBtn" id="closeHeader">&times;</span>
-                <div class="logo">
-                    <img src="asset/images/Apna Pahad.png" alt="Apna Pahad - Discover Uttrakhand">
-                </div>
-                <nav class="navbar">
-                <ul>
-                    <li class="navigation-item"><a href="#">Destinations</a></li>
-                    <li class="navigation-item"><a href="#">Experiences</a></li>
-                    <li class="navigation-item"><a href="#">Culture</a></li>
-                    <li class="navigation-item"><a href="#">Stories</a></li>
-                    <li class="navigation-item"><a href="#">Plan Your Trip</a></li>
-                </ul>
-                </nav>
-                <!--
-                <div class="mobile-newletter">
-                    <input type="email" name="email" placeholder="Enter Your Email...">
-                    <div class="checkbox">
-                        <input type="checkbox" name="privacy-policy">
-                        <label for="privacy-policy">I agree to receive emails and confirm that I have read and accepted the privacy policy.</label>
-                    </div>
-                    <button>Subscribe</button>
-                    <h2>Thank You for Subscribing!</h2>
-                    <p>We’ll keep you updated with travel inspiration, hidden gems, and unforgettable experiences from the heart of Uttarakhand — straight to your inbox.</p>
-                </div>
-                -->
-              </div>
-            </div>
-        `;
+        }
 
         function waitForElement(selector, trigger) {
             var interval = setInterval(function () {
@@ -146,24 +91,62 @@
             const openBtn = document.querySelector("#mainHeader .hamburger");
             const closeBtn = document.getElementById("closeHeader");
             const overlay = document.getElementById("HeaderOverlay");
+            const body = document.body;
 
-            openBtn.addEventListener("click", () => {
+            function openMenu() {
                 overlay.classList.add("active");
-            });
+                openBtn.classList.add("active");
+                body.style.overflow = "hidden";
+            }
 
-            closeBtn.addEventListener("click", () => {
+            function closeMenu() {
                 overlay.classList.remove("active");
-            });
+                openBtn.classList.remove("active");
+                body.style.overflow = "";
+            }
 
-            window.addEventListener("click", (e) => {
-                if (e.target === overlay) {
-                    overlay.classList.remove("active");
+            if (openBtn) {
+                openBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    if (overlay.classList.contains("active")) {
+                        closeMenu();
+                    } else {
+                        openMenu();
+                    }
+                });
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    closeMenu();
+                });
+            }
+
+            if (overlay) {
+                overlay.addEventListener("click", (e) => {
+                    if (e.target === overlay) {
+                        closeMenu();
+                    }
+                });
+
+                // Close menu when clicking on navigation links
+                const navLinks = overlay.querySelectorAll(".navigation-item a");
+                navLinks.forEach(link => {
+                    link.addEventListener("click", () => {
+                        setTimeout(() => closeMenu(), 300);
+                    });
+                });
+            }
+
+            // Close menu on escape key
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && overlay.classList.contains("active")) {
+                    closeMenu();
                 }
             });
 
             mobileNewsletter();
-
-            // waitForElement("#HeaderOverlay", )
         }
 
         function showPopup() {
@@ -190,15 +173,181 @@
             waitForElement('#mainHeader', function () {
                 var targetElement = document.querySelector("#mainHeader");
                 if (targetElement) {
-                    targetElement.insertAdjacentHTML("beforeend", [subscribePopup, mobileHeader].join('')); // Add the category section
+                    targetElement.insertAdjacentHTML("beforeend", [getSubscribePopup(), getMobileHeaderHTML()].join('')); // Add the category section
                 }
             });
             waitForElement('#mainHeader .hamburger', showMobileHeader);
             waitForElement('#mainHeader #subscribe_Button', showPopup);
         }
 
+        function isInPagesFolder() {
+            // Check current script location
+            const currentScript = document.currentScript ||
+                Array.from(document.getElementsByTagName('script')).pop();
+
+            if (currentScript && currentScript.src) {
+                if (currentScript.src.includes('/pages/') || currentScript.src.includes('\\pages\\') ||
+                    currentScript.src.includes('../asset/') || currentScript.src.includes('../../asset/')) {
+                    return true;
+                }
+            }
+
+            // Check all script tags
+            const scripts = document.getElementsByTagName('script');
+            for (let i = 0; i < scripts.length; i++) {
+                const src = scripts[i].src || scripts[i].getAttribute('src');
+                if (src && (src.includes('../asset/') || src.includes('/pages/') || src.includes('../../asset/'))) {
+                    return true;
+                }
+            }
+
+            // Check pathname
+            const pathname = window.location.pathname;
+            if (pathname.includes('/pages/') || pathname.includes('\\pages\\')) {
+                return true;
+            }
+
+            // Check href
+            const href = window.location.href;
+            if (href.includes('/pages/') || href.includes('\\pages\\')) {
+                return true;
+            }
+
+            return false;
+        }
+
+        function isInBlogFolder() {
+            // Check if we're in pages/blog/ folder
+            const pathname = window.location.pathname;
+            const href = window.location.href;
+
+            if (pathname.includes('/pages/blog/') || pathname.includes('\\pages\\blog\\') ||
+                href.includes('/pages/blog/') || href.includes('\\pages\\blog\\')) {
+                return true;
+            }
+
+            // Check script tags for ../../asset/ pattern
+            const scripts = document.getElementsByTagName('script');
+            for (let i = 0; i < scripts.length; i++) {
+                const src = scripts[i].src || scripts[i].getAttribute('src');
+                if (src && src.includes('../../asset/')) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        function isInGalleryFolder() {
+            // Check if we're in pages/gallery/ folder
+            const pathname = window.location.pathname;
+            const href = window.location.href;
+
+            if (pathname.includes('/pages/gallery/') || pathname.includes('\\pages\\gallery\\') ||
+                href.includes('/pages/gallery/') || href.includes('\\pages\\gallery\\')) {
+                return true;
+            }
+
+            return false;
+        }
+
+        function getHeaderHTML() {
+            const isInBlog = isInBlogFolder();
+            const isInGallery = isInGalleryFolder();
+            const isInPages = isInPagesFolder();
+            const assetPrefix = isInBlog ? '../../' : (isInGallery ? '../' : (isInPages ? '../' : ''));
+            const pagePrefix = isInBlog ? '../' : (isInGallery ? '../' : (isInPages ? '' : 'pages/'));
+            const homeLink = isInBlog ? '../../index.html' : (isInGallery ? '../index.html' : (isInPages ? '../index.html' : 'index.html'));
+
+            return `
+            <header id="mainHeader">
+                <div class="container">
+                <div class="hamburger" id="hamburgerBtn">
+                    <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line class="line line1" x1="3" y1="6" x2="21" y2="6"></line>
+                        <line class="line line2" x1="3" y1="12" x2="21" y2="12"></line>
+                        <line class="line line3" x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </div>
+                <a href="${homeLink}" class="logo">
+                    <img src="${assetPrefix}asset/images/logo.png" alt="Apna Pahad - Discover Uttrakhand">
+                </a>
+                <nav class="navbar">
+                    <ul>
+                        <li class="navigation-item"><a href="${pagePrefix}destinations.html">Destinations</a></li>
+                        <li class="navigation-item"><a href="${pagePrefix}experiences.html">Experiences</a></li>
+                        <li class="navigation-item"><a href="${pagePrefix}culture.html">Culture</a></li>
+                        <li class="navigation-item"><a href="${pagePrefix}stories.html">Stories</a></li>
+                        <li class="navigation-item"><a href="${pagePrefix}plan-trip.html">Plan Your Trip</a></li>
+                    </ul>
+                </nav>
+                <button id="subscribe_Button">Subscribe</button>
+                <a href="#" class="profile-img">
+                    <img src="${assetPrefix}asset/images/profile.png" alt="About Me">
+                </a>
+                </div>
+            </header>
+            `;
+        }
+
+        function getMobileHeaderHTML() {
+            const isInBlog = isInBlogFolder();
+            const isInGallery = isInGalleryFolder();
+            const isInPages = isInPagesFolder();
+            const assetPrefix = isInBlog ? '../../' : (isInGallery ? '../' : (isInPages ? '../' : ''));
+            const pagePrefix = isInBlog ? '../' : (isInGallery ? '../' : (isInPages ? '' : 'pages/'));
+            const homeLink = isInBlog ? '../../index.html' : (isInGallery ? '../index.html' : (isInPages ? '../index.html' : 'index.html'));
+
+            return `
+            <div id="HeaderOverlay" class="overlay">
+              <div class="popup">
+                <span class="closeBtn" id="closeHeader">&times;</span>
+                <a href="${homeLink}" class="logo">
+                    <img src="${assetPrefix}asset/images/logo.png" alt="Apna Pahad - Discover Uttrakhand">
+                </a>
+                <nav class="navbar">
+                <ul>
+                    <li class="navigation-item"><a href="${pagePrefix}destinations.html">Destinations</a></li>
+                    <li class="navigation-item"><a href="${pagePrefix}experiences.html">Experiences</a></li>
+                    <li class="navigation-item"><a href="${pagePrefix}culture.html">Culture</a></li>
+                    <li class="navigation-item"><a href="${pagePrefix}stories.html">Stories</a></li>
+                    <li class="navigation-item"><a href="${pagePrefix}plan-trip.html">Plan Your Trip</a></li>
+                </ul>
+                </nav>
+              </div>
+            </div>
+            `;
+        }
+
         function addHeader() {
+            // Get header HTML with correct paths
+            const headerHTML = getHeaderHTML();
             document.body.insertAdjacentHTML("afterbegin", headerHTML);
+
+            // After header is added, verify and fix image paths if needed
+            setTimeout(function () {
+                const isInBlog = isInBlogFolder();
+                const isInGallery = isInGalleryFolder();
+                const isInPages = isInPagesFolder();
+                const assetPrefix = isInBlog ? '../../' : (isInGallery ? '../' : (isInPages ? '../' : ''));
+
+                const logoImg = document.querySelector('#mainHeader .logo img');
+                const profileImg = document.querySelector('#mainHeader .profile-img img');
+
+                if (logoImg && (isInBlog || isInGallery || isInPages)) {
+                    const currentSrc = logoImg.getAttribute('src');
+                    if (!currentSrc.includes(assetPrefix)) {
+                        logoImg.src = assetPrefix + 'asset/images/logo.png';
+                    }
+                }
+
+                if (profileImg && (isInBlog || isInGallery || isInPages)) {
+                    const currentSrc = profileImg.getAttribute('src');
+                    if (!currentSrc.includes(assetPrefix)) {
+                        profileImg.src = assetPrefix + 'asset/images/profile.png';
+                    }
+                }
+            }, 100);
         };
 
         function initNewsletterPopupForm() {
@@ -258,7 +407,7 @@
             function validateEmail(email) {
                 return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
             }
-          }
+        }
 
         // Initialize when the DOM is ready
 
@@ -266,9 +415,12 @@
         function init() {
             try {
                 document.body.classList.add(variation_name);
-                waitForElement('#mainHeader .popup .newletter-form input', initNewsletterPopupForm);
                 addHeader();
                 addPopup();
+                // Initialize newsletter form after popup is added
+                waitForElement('#popupOverlay .popup .newletter-form input', function () {
+                    initNewsletterPopupForm();
+                });
             } catch (error) {
                 if (debug) console.error('Error in init function:', error);
             }

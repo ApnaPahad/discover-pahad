@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap – Apna Pahad</title>
+    <meta name="description"
+        content="Complete sitemap of Apna Pahad website - Explore all pages and destinations in Uttarakhand.">
+    <link rel="icon" type="image/png" href="asset/images/fav-icon.png">
+    <link rel="stylesheet" href="asset/css/global.css">
+    <link rel="stylesheet" href="asset/css/header.css">
+    <link rel="stylesheet" href="asset/css/font-family.css">
+    <link rel="stylesheet" href="asset/css/footer.css">
+    <link rel="stylesheet" href="asset/css/pages.css">
+    <style>
+        /* Force header styling */
+        #mainHeader {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+
+        #mainHeader .navbar .navigation-item a {
+            color: #f7fafc !important;
+        }
+
+        #mainHeader .logo img {
+            filter: brightness(0) invert(1) !important;
+        }
+
+        #mainHeader .profile-img img {
+            filter: brightness(0) invert(1) !important;
+        }
+
+        #mainHeader .hamburger svg path {
+            fill: #ffffff !important;
+        }
+
+        #mainHeader #subscribe_Button {
+            background: rgba(255, 255, 255, 0.2) !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            color: #ffffff !important;
+        }
+
+        .sitemap-page {
+            padding: 120px 15px 80px;
+            background: #fbfaf9;
+            min-height: 100vh;
+        }
+
+        .sitemap-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sitemap-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .sitemap-header h1 {
+            font-family: var(--primary-font-family);
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--primary-font-color);
+            margin-bottom: 16px;
+        }
+
+        .sitemap-header p {
+            font-family: var(--primary-font-family);
+            font-size: 18px;
+            color: rgba(13, 20, 28, 0.7);
+        }
+
+        .sitemap-section {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .sitemap-section h2 {
+            font-family: var(--primary-font-family);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-font-color);
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 3px solid #0054AA;
+        }
+
+        .sitemap-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .sitemap-link {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .sitemap-link:hover {
+            background: #fff;
+            border-color: #0054AA;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 84, 170, 0.2);
+        }
+
+        .sitemap-link-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #0054AA 0%, #BF4408 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+
+        .sitemap-link-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+        }
+
+        .sitemap-link-content {
+            flex: 1;
+        }
+
+        .sitemap-link-content h3 {
+            font-family: var(--primary-font-family);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary-font-color);
+            margin-bottom: 4px;
+        }
+
+        .sitemap-link-content p {
+            font-family: var(--primary-font-family);
+            font-size: 13px;
+            color: rgba(13, 20, 28, 0.6);
+            margin: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            .sitemap-page {
+                padding: 100px 15px 60px;
+            }
+
+            .sitemap-header h1 {
+                font-size: 32px;
+            }
+
+            .sitemap-section {
+                padding: 24px;
+            }
+
+            .sitemap-section h2 {
+                font-size: 24px;
+            }
+
+            .sitemap-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main id="main-content">
+        <section class="sitemap-page">
+            <div class="sitemap-container">
+                <div class="sitemap-header">
+                    <h1>Site Map</h1>
+                    <p>Explore all pages and discover the beauty of Uttarakhand</p>
+                </div>
+                <!-- Sitemap sections will be dynamically generated here -->
+            </div>
+        </section>
+    </main>
+
+    <footer id="mainFooter"></footer>
+    <script src="asset/js/global.js"></script>
+    <script src="asset/js/header.js"></script>
+    <script src="asset/js/footer.js"></script>
+    <script src="asset/js/sitemap.js"></script>
+    <script src="asset/js/landing-page.js"></script>
+</body>
+
+</html>

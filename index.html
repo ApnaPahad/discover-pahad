@@ -1,170 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apna Pahad – Explore Uttarakhand's Culture & Nature</title>
-    <meta name="description" content="Explore the beauty, culture, and adventures of Uttarakhand with Apna Pahad. Plan your next trip to the heart of the Himalayas.">
+    <meta name="description"
+        content="Explore the beauty, culture, and adventures of Uttarakhand with Apna Pahad. Plan your next trip to the heart of the Himalayas.">
     <link rel="icon" type="image/png" href="asset/images/fav-icon.png">
     <link rel="stylesheet" href="asset/css/global.css">
     <link rel="stylesheet" href="asset/css/header.css">
     <link rel="stylesheet" href="asset/css/landing_page.css">
     <link rel="stylesheet" href="asset/css/font-family.css">
+    <link rel="stylesheet" href="asset/css/footer.css">
 </head>
+
 <body>
     <main id="main-content">
-        <section class="hero-banner">
+        <section class="hero-banner parallax-section">
+            <!-- 
+                HERO VIDEO: Replace the video source with your own video file
+                Recommended: MP4 format, 1920x1080px or larger, landscape orientation
+                Video should be optimized for web (compressed but high quality)
+                You can use:
+                - Your own video: asset/videos/hero-video.mp4
+                - Or use a video hosting service
+            -->
+            <div class="parallax-bg"
+                style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+            </div>
             <div class="container">
-                <h1 class="title">Discover the Untouched Beauty of Uttarakhand</h1>
-                <p class="description">Explore hidden gems, sacred sites, and unforgettable adventures.</p>
-                <a href="#" class="start-exploring">Start Exploring</a>
+                <h1 class="title fade-in-up">Discover the Untouched Beauty of Uttarakhand</h1>
+                <p class="description fade-in-up">Explore hidden gems, sacred sites, and unforgettable adventures.</p>
+                <a href="#featured-destinations" class="start-exploring fade-in-up">Start Exploring</a>
             </div>
         </section>
 
-        <section class="text-with-image tab-section">
+        <section class="text-with-image tab-section scroll-animate">
             <div class="container">
-                <h2 class="section-title">Spirit of Uttarakhand</h2>
+                <h2 class="section-title fade-in">Spirit of Uttarakhand</h2>
                 <div class="content-wrapper">
-                <div class="img-section">
-                    <div class="image" data-step="1">
-                        <img src="asset/images/Top Destination.jpg" alt="Top Destination" data-step="1">
-                        <div class="overlay">
-                            <div>
-                            <h3>Top Destination</h3>
-                            <a href="#" class="explore">Explore</a>
+                    <div class="img-section">
+                        <div class="image" data-step="1">
+                            <!-- Top Destinations: Nainital, Mussoorie, Auli, or Valley of Flowers -->
+                            <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                alt="Top Destination - Nainital Lake" data-step="1">
+                            <div class="overlay">
+                                <div>
+                                    <h3>Top Destination</h3>
+                                    <a href="pages/destinations.html" class="explore">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image" data-step="2">
+                            <!-- Adventure: Bungee jumping, River rafting, Trekking, or Skiing -->
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                alt="Adventures - River Rafting in Rishikesh" data-step="2">
+                            <div class="overlay">
+                                <div>
+                                    <h3>Adventures</h3>
+                                    <a href="pages/experiences.html" class="explore">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image" data-step="3">
+                            <!-- Culture: Traditional dance, Local festivals, Traditional attire or rituals -->
+                            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                alt="Cultural Highlights - Traditional Uttarakhand Festivals" data-step="3">
+                            <div class="overlay">
+                                <div>
+                                    <h3>Culture Highlights</h3>
+                                    <a href="pages/culture.html" class="explore">Explore</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="image" data-step="2">
-                        <img src="asset/images/Adventures.jpg" alt="Adventures" data-step="2">
-                        <div class="overlay">
-                            <div>
-                            <h3>Adventures</h3>
-                            <a href="#" class="explore">Explore</a>
-                            </div>
+                    <div class="text-section">
+                        <div class="box active" data-step="1">
+                            <h3 class="heading">Top Destination</h3>
+                            <p>Explore the picturesque hill stations and serene lakes of Uttarakhand for a peaceful
+                                getaway.</p>
+                        </div>
+                        <div class="box" data-step="2">
+                            <h3 class="heading">Adventures</h3>
+                            <p>Embark on thrilling adventures like river rafting, paragliding, and trekking in the
+                                majestic mountains of Uttarakhand.</p>
+                        </div>
+                        <div class="box" data-step="3">
+                            <h3 class="heading">Cultural Highlights</h3>
+                            <p>Experience the rich cultural heritage of Uttarakhand through traditional music, dance,
+                                and art forms.</p>
                         </div>
                     </div>
-                    <div class="image" data-step="3">
-                        <img src="asset/images/Culture Highlights.jpg" alt="Cultural Highlights" data-step="3">
-                        <div class="overlay">
-                            <div>
-                            <h3>Culture Highlights</h3>
-                            <a href="#" class="explore">Explore</a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-section">
-                    <div class="box active" data-step="1">
-                        <h3 class="heading">Top Destination</h3>
-                        <p>Explore the picturesque hill stations and serene lakes of Uttarakhand for a peaceful getaway.</p>
-                    </div>
-                    <div class="box" data-step="2">
-                        <h3 class="heading">Adventures</h3>
-                        <p>Embark on thrilling adventures like river rafting, paragliding, and trekking in the majestic mountains of Uttarakhand.</p>
-                    </div>
-                    <div class="box" data-step="3">
-                        <h3 class="heading">Cultural Highlights</h3>
-                        <p>Experience the rich cultural heritage of Uttarakhand through traditional music, dance, and art forms.</p>
-                    </div>
-                </div>
                 </div>
             </div>
         </section>
 
-        <section class="plan-your-adventure">
+        <section class="plan-your-adventure scroll-animate">
             <div class="container">
-                <div class="card">
+                <div class="card fade-in-scale">
                     <div class="section-content">
                         <h2 class="section-title">Plan Your Adventure in Uttarakhand</h2>
-                        <p>Explore the beauty of the Himalayas and immerse yourself in the rich culture of Uttarakhand.</p>
+                        <p>Explore the beauty of the Himalayas and immerse yourself in the rich culture of Uttarakhand.
+                        </p>
                     </div>
-                    <a href="#" class="start-planing">Start Planning</a>
+                    <a href="pages/plan-trip.html" class="start-planing">Start Planning</a>
                 </div>
             </div>
         </section>
 
-        <section class="discover-the-power">
+        <section class="discover-the-power scroll-animate">
             <div class="container">
-                <div class="section-content">
-                    <h2 class="title">Discover the Power of Our Products</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-                    <a href="#" class="more-explore">Explore More</a>
+                <div class="section-header">
+                    <h2 class="section-title fade-in">Discover the Power of Our Products</h2>
+                    <p class="section-subtitle fade-in">Explore the diverse offerings of Uttarakhand tourism. From
+                        breathtaking destinations to thrilling adventures, immerse yourself in rich cultural experiences
+                        and get inspired by travel stories from fellow explorers.</p>
                 </div>
-                <div class="card-wrapper">
-                    <div class="card card_01">
-                        <div class="card-header">
-                            <h3>Explore Top Destinations</h3>
-                            <p class="card-number">01</p>
+                <div class="products-grid">
+                    <div class="product-card fade-in-up">
+                        <div class="product-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
                         </div>
-                        <p class="card-description">Discover the most breathtaking destinations in Uttarakhand and plan your trip to explore the beauty of the Himalayas.</p>
+                        <div class="product-number">01</div>
+                        <h3>Explore Top Destinations</h3>
+                        <p>Discover the most breathtaking destinations in Uttarakhand and plan your trip to explore the
+                            beauty of the Himalayas.</p>
+                        <a href="pages/destinations.html" class="product-link">Learn More →</a>
                     </div>
-                    <div class="card card_02">
-                        <div class="card-header">
-                            <h3>Immerse in Cultural Highlights</h3>
-                            <p class="card-number">02</p>
+                    <div class="product-card fade-in-up">
+                        <div class="product-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
                         </div>
-                        <p class="card-description">Experience the rich culture and traditions of Uttarakhand through its festivals, cuisine, music, and art.</p>
+                        <div class="product-number">02</div>
+                        <h3>Immerse in Cultural Highlights</h3>
+                        <p>Experience the rich culture and traditions of Uttarakhand through its festivals, cuisine,
+                            music, and art.</p>
+                        <a href="pages/culture.html" class="product-link">Learn More →</a>
                     </div>
-                    <div class="card card_03">
-                        <div class="card-header">
-                            <h3>Embark on Thrilling Adventures</h3>
-                            <p class="card-number">03</p>
+                    <div class="product-card fade-in-up">
+                        <div class="product-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
                         </div>
-                        <p class="card-description">Indulge in adrenaline-pumping activities like trekking, rafting, paragliding, and more amidst the stunning landscapes of Uttarakhand.</p>
+                        <div class="product-number">03</div>
+                        <h3>Embark on Thrilling Adventures</h3>
+                        <p>Indulge in adrenaline-pumping activities like trekking, rafting, paragliding, and more amidst
+                            the stunning landscapes of Uttarakhand.</p>
+                        <a href="pages/experiences.html" class="product-link">Learn More →</a>
                     </div>
-                    <div class="card card_04">
-                        <div class="card-header">
-                            <h3>Read Inspiring Blogs</h3>
-                            <p class="card-number">04</p>
+                    <div class="product-card fade-in-up">
+                        <div class="product-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 17H20v-4H6.5A2.5 2.5 0 0 0 4 15.5v2z"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
                         </div>
-                        <p class="card-description">Get insights, tips, and stories from fellow travelers and experts to make the most of your trip to Uttarakhand.</p>
+                        <div class="product-number">04</div>
+                        <h3>Read Inspiring Stories</h3>
+                        <p>Get insights, tips, and stories from fellow travelers and experts to make the most of your
+                            trip to Uttarakhand.</p>
+                        <a href="pages/stories.html" class="product-link">Learn More →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="photo-garelly">
+        <section id="photo-gallery" class="photo-garelly scroll-animate">
             <div class="container">
-                <h2 class="section-title">Photo Gallery</h2>
+                <h2 class="section-title fade-in">Photo Gallery</h2>
                 <div class="card-wrapper">
-                    <div class="card landscape">
+                    <a href="pages/gallery/landscape-gallery.html" class="card landscape">
                         <div class="card-img">
-                            <img src="asset/images/Landscape.png" alt="Landscape" width="240" height="240">
+                            <!-- Landscape: Himalayan mountains, valleys, scenic views -->
+                            <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Himalayan Landscape - Valley of Flowers" width="240" height="240">
                         </div>
                         <p class="card-name">Landscape</p>
-                    </div>
-                    <div class="card culture">
+                    </a>
+                    <a href="pages/gallery/culture-gallery.html" class="card culture">
                         <div class="card-img">
-                            <img src="asset/images/Culture.png" alt="Culture" width="240" height="240">
+                            <!-- Culture: Traditional dance, festivals, rituals -->
+                            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Uttarakhand Culture - Traditional Festivals" width="240" height="240">
                         </div>
                         <p class="card-name">Culture</p>
-                    </div>
-                    <div class="card adventure">
+                    </a>
+                    <a href="pages/gallery/adventure-gallery.html" class="card adventure">
                         <div class="card-img">
-                            <img src="asset/images/Adventure.png" alt="Adventure" width="240" height="240">
+                            <!-- Adventure: Rafting, trekking, paragliding -->
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Adventure Sports - River Rafting" width="240" height="240">
                         </div>
                         <p class="card-name">Adventure</p>
-                    </div>
-                    <div class="card food">
+                    </a>
+                    <a href="pages/gallery/temples-gallery.html" class="card temples">
                         <div class="card-img">
-                            <img src="asset/images/Food.png" alt="Food" width="240" height="240">
+                            <!-- Temples: Uttarakhand temples and religious sites -->
+                            <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Uttarakhand Temples - Religious Sites" width="240" height="240">
                         </div>
-                        <p class="card-name">Food</p>
-                    </div>
-                    <div class="card village">
+                        <p class="card-name">Temples</p>
+                    </a>
+                    <a href="pages/gallery/village-gallery.html" class="card village">
                         <div class="card-img">
-                            <img src="asset/images/Village.png" alt="Village" width="240" height="240">
+                            <!-- Village: Mountain villages, traditional architecture -->
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Mountain Village - Traditional Architecture" width="240" height="240">
                         </div>
                         <p class="card-name">Village</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Destinations Section -->
+        <section id="featured-destinations" class="featured-destinations scroll-animate">
+            <div class="container">
+                <h2 class="section-title fade-in">Featured Destinations</h2>
+                <p class="section-subtitle fade-in">Discover the most breathtaking places in Uttarakhand</p>
+                <div class="destinations-grid">
+                    <div class="destination-card fade-in-up">
+                        <div class="destination-image">
+                            <!-- Mussoorie: Real image of Mussoorie hill station -->
+                            <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                alt="Mussoorie - The Queen of Hills">
+                            <div class="destination-overlay">
+                                <h3>Mussoorie</h3>
+                                <p>The Queen of Hills</p>
+                                <a href="pages/destinations.html#mussoorie" class="destination-btn">Explore</a>
+                            </div>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Mussoorie</h3>
+                            <p>Experience the charm of this hill station with panoramic views of the Himalayas.</p>
+                        </div>
                     </div>
+                    <div class="destination-card fade-in-up">
+                        <div class="destination-image">
+                            <!-- Rishikesh: Real image of Rishikesh with Ganges -->
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                alt="Rishikesh - Yoga Capital">
+                            <div class="destination-overlay">
+                                <h3>Rishikesh</h3>
+                                <p>Yoga Capital of the World</p>
+                                <a href="pages/destinations.html#rishikesh" class="destination-btn">Explore</a>
+                            </div>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Rishikesh</h3>
+                            <p>A spiritual haven on the banks of the Ganges, perfect for yoga and adventure.</p>
+                        </div>
+                    </div>
+                    <div class="destination-card fade-in-up">
+                        <div class="destination-image">
+                            <!-- Nainital: Real image of Nainital lake -->
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                alt="Nainital - Lake District">
+                            <div class="destination-overlay">
+                                <h3>Nainital</h3>
+                                <p>Lake District of India</p>
+                                <a href="pages/destinations.html#nainital" class="destination-btn">Explore</a>
+                            </div>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Nainital</h3>
+                            <p>Surrounded by mountains, this lake town offers serene beauty and tranquility.</p>
+                        </div>
+                    </div>
+                    <div class="destination-card fade-in-up">
+                        <div class="destination-image">
+                            <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                alt="Valley of Flowers">
+                            <div class="destination-overlay">
+                                <h3>Valley of Flowers</h3>
+                                <p>Nature's Paradise</p>
+                                <a href="pages/destinations.html#valley-of-flowers" class="destination-btn">Explore</a>
+                            </div>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Valley of Flowers</h3>
+                            <p>A UNESCO World Heritage Site with vibrant alpine flowers and stunning landscapes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials scroll-animate">
+            <div class="container">
+                <h2 class="section-title fade-in">What Travelers Say</h2>
+                <p class="section-subtitle fade-in">Real experiences from our visitors</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-in-up">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">Uttarakhand exceeded all my expectations. The mountains, the
+                                culture, and the people made it an unforgettable journey.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                    alt="Sarah Johnson">
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Travel Blogger</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fade-in-up">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">The adventure activities in Rishikesh were absolutely thrilling.
+                                Best vacation I've ever had!</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                    alt="Michael Chen">
+                            </div>
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <p>Adventure Enthusiast</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fade-in-up">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">The cultural experiences and local cuisine were amazing. I felt
+                                truly connected to the spirit of Uttarakhand.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                    alt="Priya Sharma">
+                            </div>
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <p>Cultural Explorer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section scroll-animate">
+            <div class="container">
+                <div class="newsletter-content fade-in-scale">
+                    <div class="newsletter-text">
+                        <h2>Stay Updated with Uttarakhand</h2>
+                        <p>Get the latest travel tips, destination guides, and exclusive offers delivered to your inbox.
+                        </p>
+                    </div>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="form-group">
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </div>
+                        <p class="form-note">We respect your privacy. Unsubscribe at any time.</p>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer id="mainFooter">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <div class="footer-logo">
+                        <img src="asset/images/logo.png" alt="Apna Pahad">
+                    </div>
+                    <p class="footer-description">Discover the untouched beauty of Uttarakhand. Explore hidden gems,
+                        sacred sites, and unforgettable adventures in the heart of the Himalayas.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                            aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                            aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                            aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-list">
+                        <li><a href="pages/destinations.html">Top Destinations</a></li>
+                        <li><a href="pages/experiences.html">Adventures</a></li>
+                        <li><a href="pages/culture.html">Cultural Highlights</a></li>
+                        <li><a href="#photo-gallery">Photo Gallery</a></li>
+                        <li><a href="pages/plan-trip.html">Plan Your Trip</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section links">
+                    <h3 class="footer-heading">Explore</h3>
+                    <ul class="footer-list">
+                        <li><a href="pages/culture.html">About Uttarakhand</a></li>
+                        <li><a href="pages/stories.html">Travel Guides</a></li>
+                        <li><a href="pages/plan-trip.html">Best Time to Visit</a></li>
+                        <li><a href="pages/culture.html#cuisine">Local Cuisine</a></li>
+                        <li><a href="pages/culture.html#festivals">Festivals & Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            <span>Dehradun, Uttarakhand, India</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                            </svg>
+                            <span>+91 123 456 7890</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                            <span>info@apnapahad.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Apna Pahad. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="asset/js/global.js"></script>
     <script src="asset/js/header.js"></script>
     <script src="asset/js/landing-page.js"></script>
+    <script type="text/javascript">
+        document.body.classList.add('home-page');
+
+        // Test function to check if scrolled class is being added
+        // You can call this in console: testHeaderScroll()
+        window.testHeaderScroll = function () {
+            const header = document.getElementById('mainHeader');
+            const heroSection = document.querySelector('.hero-banner');
+            const scrollPosition = window.pageYOffset || window.scrollY;
+
+            console.log('Header:', header);
+            console.log('Hero Section:', heroSection);
+            console.log('Scroll Position:', scrollPosition);
+            console.log('Header has scrolled class:', header ? header.classList.contains('scrolled') : 'Header not found');
+
+            if (heroSection) {
+                const heroHeight = heroSection.offsetHeight;
+                const scrollThreshold = heroHeight * 0.8;
+                console.log('Hero Height:', heroHeight);
+                console.log('Scroll Threshold:', scrollThreshold);
+                console.log('Has scrolled past hero:', scrollPosition > scrollThreshold || scrollPosition > 100);
+            }
+        };
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,20 @@
+# URL Rewriting to remove /pages/ from URLs
+RewriteEngine On
+
+# Redirect /pages/* to /* (removes /pages/ from URL)
+RewriteCond %{THE_REQUEST} /pages/([^\s?]*) [NC]
+RewriteRule ^ /%1? [R=301,L]
+
+# Internally rewrite /* to /pages/* if file exists in pages folder
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/pages%{REQUEST_URI} -f
+RewriteRule ^(.*)$ /pages/$1 [L]
+
+# Handle HTML files without extension
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.html$
+RewriteCond %{DOCUMENT_ROOT}/pages%{REQUEST_URI}.html -f
+RewriteRule ^(.*)$ /pages/$1.html [L]
+
