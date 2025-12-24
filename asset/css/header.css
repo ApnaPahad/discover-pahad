@@ -219,7 +219,7 @@
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 10000;
+  z-index: 999999;
   animation: fadeIn 0.3s ease;
 }
 
@@ -538,7 +538,7 @@
   z-index: 1;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 899px) {
   #mainHeader .container {
     justify-content: space-between;
   }
@@ -706,6 +706,7 @@
     background: var(--bg-white);
     box-shadow: 0 2px 8px var(--shadow-dark);
     text-decoration: none;
+    text-shadow: none !important;
   }
 
   #mainHeader #HeaderOverlay .navbar .navigation-item a::before {
@@ -729,6 +730,70 @@
 
   #mainHeader #HeaderOverlay .navbar .navigation-item a:hover::before {
     left: 0;
+  }
+
+  #mainHeader #HeaderOverlay #subscribe_Button {
+    width: 100%;
+    height: 48px;
+    padding: 0px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: var(--gradient-blue);
+    color: var(--secondary-font-color);
+    text-align: center;
+    font-family: var(--primary-font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px var(--shadow-blue-light);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    text-shadow: none !important;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  #mainHeader #HeaderOverlay.overlay.active #subscribe_Button {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease 0.3s, transform 0.4s ease 0.3s;
+  }
+
+  #mainHeader #HeaderOverlay #subscribe_Button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--overlay-white-medium),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  #mainHeader #HeaderOverlay #subscribe_Button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--shadow-blue-medium);
+    background: var(--gradient-blue-reverse);
+  }
+
+  #mainHeader #HeaderOverlay #subscribe_Button:hover::before {
+    left: 100%;
+  }
+
+  #mainHeader #HeaderOverlay #subscribe_Button:active {
+    transform: translateY(0);
   }
 
   #mainHeader #HeaderOverlay .mobile-newletter {

@@ -150,23 +150,29 @@
         }
 
         function showPopup() {
-            const openBtn = document.getElementById("subscribe_Button");
+            const openBtns = document.querySelectorAll("#subscribe_Button");
             const closeBtn = document.getElementById("closePopupBtn");
             const overlay = document.getElementById("popupOverlay");
 
-            openBtn.addEventListener("click", () => {
-                overlay.style.display = "flex";
+            openBtns.forEach(openBtn => {
+                openBtn.addEventListener("click", () => {
+                    overlay.style.display = "flex";
+                });
             });
 
-            closeBtn.addEventListener("click", () => {
-                overlay.style.display = "none";
-            });
-
-            window.addEventListener("click", (e) => {
-                if (e.target === overlay) {
+            if (closeBtn) {
+                closeBtn.addEventListener("click", () => {
                     overlay.style.display = "none";
-                }
-            });
+                });
+            }
+
+            if (overlay) {
+                window.addEventListener("click", (e) => {
+                    if (e.target === overlay) {
+                        overlay.style.display = "none";
+                    }
+                });
+            }
         }
 
         function addPopup() {
@@ -314,6 +320,7 @@
                     <li class="navigation-item"><a href="${pagePrefix}plan-trip.html">Plan Your Trip</a></li>
                 </ul>
                 </nav>
+                <button id="subscribe_Button">Subscribe</button>
               </div>
             </div>
             `;
