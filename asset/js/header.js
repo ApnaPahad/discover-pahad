@@ -1,3 +1,5 @@
+// google sheet - https://docs.google.com/spreadsheets/d/15vfTPLB5ryRg2K-4i-HqOYvVup3VXnWEFEKmoNGdN38
+
 (function () {
     try {
         /* main variables */
@@ -15,14 +17,14 @@
                 </div>
                 <h2>Stay Connected to the Spirit of Uttarakhand!</h2>
                 <p>Unlock exclusive content, travel tips, and special offers delivered straight to your inbox. Be the first to know about new destinations and hidden gems in Uttarakhand.</p>
-                <div class="newletter-form">
-                    <input type="email" name="email" placeholder="Enter Your Email...">
+                <form class="newletter-form">
+                    <input type="email" name="email" id="newsletter-email" placeholder="Enter Your Email..." required>
                     <div class="checkbox">
-                        <input type="checkbox" name="privacy-policy">
+                        <input type="checkbox" name="privacy-policy" id="privacy-policy" required>
                         <label for="privacy-policy">I agree to receive emails and confirm that I have read and accepted the privacy policy.</label>
                     </div>
-                    <button>Subscribe</button>
-                </div>
+                    <button type="submit">Subscribe</button>
+                </form>
               </div>
             </div>
         `;
