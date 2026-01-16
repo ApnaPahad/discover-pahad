@@ -14,7 +14,6 @@ Allow: /*.html
 
 # Sitemap location
 Sitemap: https://pnapahad.github.io/discover-pahad/sitemap.xml
-Sitemap: https://pnapahad.github.io/discover-pahad/sitemap.html
 
 # Crawl delay (optional - adjust as needed)
 Crawl-delay: 1

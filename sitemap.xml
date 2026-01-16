@@ -6,7 +6,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://pnapahad.github.io/discover-pahad/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -14,35 +14,35 @@
   <!-- Main Pages -->
   <url>
     <loc>https://pnapahad.github.io/discover-pahad/destinations.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://pnapahad.github.io/discover-pahad/experiences.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://pnapahad.github.io/discover-pahad/culture.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://pnapahad.github.io/discover-pahad/stories.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://pnapahad.github.io/discover-pahad/plan-trip.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -50,43 +50,135 @@
   <!-- Gallery Pages -->
   <url>
     <loc>https://pnapahad.github.io/discover-pahad/landscape-gallery.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://pnapahad.github.io/discover-pahad/culture-gallery.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://pnapahad.github.io/discover-pahad/adventure-gallery.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://pnapahad.github.io/discover-pahad/temples-gallery.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://pnapahad.github.io/discover-pahad/village-gallery.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Blog Pages -->
+  <url>
+    <loc>https://pnapahad.github.io/discover-pahad/mussoorie.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pnapahad.github.io/discover-pahad/rishikesh.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pnapahad.github.io/discover-pahad/nainital.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pnapahad.github.io/discover-pahad/valley-of-flowers.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pnapahad.github.io/discover-pahad/river-rafting.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pnapahad.github.io/discover-pahad/trekking-hiking.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pnapahad.github.io/discover-pahad/paragliding.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pnapahad.github.io/discover-pahad/festivals.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pnapahad.github.io/discover-pahad/music-dance.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pnapahad.github.io/discover-pahad/local-cuisine.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pnapahad.github.io/discover-pahad/valley-of-flowers-journey.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pnapahad.github.io/discover-pahad/best-time-to-visit.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pnapahad.github.io/discover-pahad/travel-tips.html</loc>
+    <lastmod>2025-01-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Sitemap Page -->
   <url>
     <loc>https://pnapahad.github.io/discover-pahad/sitemap.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
