@@ -357,7 +357,6 @@ function init() {
     initTabSection();
     initParallax();
     initBackgroundParallax();
-    // initScrollAnimations(); // Moved to global.js for use on all pages
     initFadeInAnimations();
     initCardAnimations();
     initPhotoGalleryAnimations();

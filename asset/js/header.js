@@ -3,7 +3,7 @@
 (function () {
     try {
         /* main variables */
-        var debug = 1;
+        var debug = 0;
         var variation_name = "addHeader";
 
 
@@ -181,7 +181,7 @@
             waitForElement('#mainHeader', function () {
                 var targetElement = document.querySelector("#mainHeader");
                 if (targetElement) {
-                    targetElement.insertAdjacentHTML("beforeend", [getSubscribePopup(), getMobileHeaderHTML()].join('')); // Add the category section
+                    targetElement.insertAdjacentHTML("beforeend", getSubscribePopup() + getMobileHeaderHTML());
                 }
             });
             waitForElement('#mainHeader .hamburger', showMobileHeader);
@@ -360,13 +360,15 @@
         };
 
         function initNewsletterPopupForm() {
-            const subscribeBtn = document.querySelector("#popupOverlay .popup .newletter-form button");
+            const form = document.querySelector("#popupOverlay .popup .newletter-form");
 
-            if (!subscribeBtn) return;
+            if (!form) return;
 
-            subscribeBtn.addEventListener("click", function () {
-                const emailInput = document.querySelector("#popupOverlay .popup .newletter-form input[type='email']");
-                const checkbox = document.querySelector("#popupOverlay .popup .newletter-form .checkbox input");
+            form.addEventListener("submit", function (e) {
+                e.preventDefault(); // Prevent default form submission
+
+                const emailInput = form.querySelector("input[type='email']");
+                const checkbox = form.querySelector(".checkbox input[type='checkbox']");
                 const email = emailInput.value.trim();
 
                 if (!checkbox.checked) {
@@ -378,6 +380,12 @@
                     alert("Please enter a valid email address.");
                     return;
                 }
+
+                // Disable button during submission
+                const submitBtn = form.querySelector("button[type='submit']");
+                const originalBtnText = submitBtn.textContent;
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Subscribing...";
 
                 fetch("https://script.google.com/macros/s/AKfycbwdRQ44BKbHL6hCNfB2k1z29KdFyrjn1_B1-EUQLUvSSzO9Y8YQaZHWsV2NhRfvnvU4/exec", {
                     method: "POST",
@@ -397,12 +405,12 @@
                         // Update paragraph
                         const paragraph = document.querySelector("#popupOverlay .popup p");
                         if (paragraph) {
-                            paragraph.textContent = "We’ll keep you updated with travel inspiration, hidden gems, and unforgettable experiences from the heart of Uttarakhand — straight to your inbox.";
+                            paragraph.textContent = "We'll keep you updated with travel inspiration, hidden gems, and unforgettable experiences from the heart of Uttarakhand — straight to your inbox.";
                             paragraph.style.marginBottom = "0px";
+                            paragraph.style.paddingBottom = "40px";
                         }
 
                         // Hide the form
-                        const form = document.querySelector("#popupOverlay .popup .newletter-form");
                         if (form) {
                             form.style.display = "none";
                         }
@@ -410,6 +418,9 @@
                     .catch(error => {
                         console.error("Error:", error);
                         alert("Something went wrong. Please try again later.");
+                        // Re-enable button on error
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalBtnText;
                     });
             });
 

@@ -498,27 +498,6 @@
     <script src="asset/js/landing-page.js"></script>
     <script type="text/javascript">
         document.body.classList.add('home-page');
-
-        // Test function to check if scrolled class is being added
-        // You can call this in console: testHeaderScroll()
-        window.testHeaderScroll = function () {
-            const header = document.getElementById('mainHeader');
-            const heroSection = document.querySelector('.hero-banner');
-            const scrollPosition = window.pageYOffset || window.scrollY;
-
-            console.log('Header:', header);
-            console.log('Hero Section:', heroSection);
-            console.log('Scroll Position:', scrollPosition);
-            console.log('Header has scrolled class:', header ? header.classList.contains('scrolled') : 'Header not found');
-
-            if (heroSection) {
-                const heroHeight = heroSection.offsetHeight;
-                const scrollThreshold = heroHeight * 0.8;
-                console.log('Hero Height:', heroHeight);
-                console.log('Scroll Threshold:', scrollThreshold);
-                console.log('Has scrolled past hero:', scrollPosition > scrollThreshold || scrollPosition > 100);
-            }
-        };
     </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVXH75NW" height="0" width="0"

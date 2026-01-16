@@ -159,7 +159,6 @@
                 }
             } catch (error) {
                 // Silently fail - use default metadata
-                console.debug('Could not fetch page:', pageUrl);
             }
         }
 

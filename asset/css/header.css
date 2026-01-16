@@ -78,10 +78,6 @@
   filter: brightness(0) invert(1) !important;
 }
 
-#mainHeader.scrolled .hamburger svg path {
-  fill: var(--text-white) !important;
-}
-
 #mainHeader.scrolled .navbar .navigation-item a,
 #mainHeader.scrolled .navbar ul li a,
 #mainHeader.scrolled nav .navigation-item a,
