@@ -630,6 +630,7 @@
   #mainHeader #HeaderOverlay .navbar {
     margin-bottom: 30px;
     width: 100%;
+    flex: unset;
   }
 
   #mainHeader #HeaderOverlay .navbar ul {
