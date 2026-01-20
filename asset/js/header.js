@@ -10,7 +10,7 @@
         function getSubscribePopup() {
             return `
             <div id="popupOverlay" class="overlay">
-              <div class="popup">
+              <div class="popup" id="subscribePopup">
                 <span class="closeBtn" id="closePopupBtn">&times;</span>
                 <div class="popup-image">
                     <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Discover Uttarakhand - Valley of Flowers">
@@ -451,4 +451,5 @@
     } catch (e) {
         if (debug) console.log(e, "error in Test" + variation_name);
     }
+
 })();
